@@ -1,124 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>暗黑风格作品集 - 你的名字</title>
+    <title>在线作品集 - 你的名字</title>
     <style>
-        /* 基础样式 */
+        /* 暗黑风格样式 */
         body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            background: #1a1a1a;
+            color: white;
             margin: 0;
-            padding: 30px;
-            min-height: 100vh;
+            font-family: Arial;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        /* 头部样式 */
-        .header {
-            text-align: center;
-            padding: 50px 0;
-            border-bottom: 2px solid #2a2a2a;
-            margin-bottom: 40px;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            color: #00ff9d; /* 荧光绿标题 */
-            margin: 10px 0;
-            letter-spacing: 2px;
-        }
-
-        .header p {
-            color: #888;
-            font-size: 1.1em;
-        }
-
-        /* PDF预览容器 */
-        .pdf-preview {
-            background: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
             padding: 20px;
-            margin: 30px 0;
         }
-
-        iframe {
+        /* PDF查看器样式 */
+        #pdf-viewer {
             width: 100%;
-            height: 700px;
+            height: 90vh;
             border: none;
-            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
-
         /* 下载按钮 */
         .download-btn {
-            display: inline-block;
-            padding: 15px 35px;
-            background: #0066ff;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin: 20px 0;
-            border: 2px solid #0044cc;
-        }
-
-        .download-btn:hover {
-            background: #0044cc;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,68,204,0.3);
-        }
-
-        /* 联系方式 */
-        .contact-bar {
-            background: #2a2a2a;
-            padding: 15px;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #2196F3;
+            color: white;
             text-align: center;
-            margin-top: 40px;
-            border-radius: 8px;
-        }
-
-        .contact-bar a {
-            color: #00ff9d;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1em;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 头部信息 -->
-        <div class="header">
-            <h1>你的名字</h1>
-            <p>UI/UX Designer & Creative Developer</p>
-        </div>
-
-        <!-- PDF预览 -->
-        <div class="pdf-preview">
-            <iframe src="your-portfolio.pdf"></iframe>
-        </div>
-
+        <h1 style="text-align: center;">我的作品集</h1>
+        
+        <!-- PDF 查看器 -->
+        <iframe 
+            id="pdf-viewer"
+            src="resume.pdf#toolbar=1&navpanes=0&scrollbar=1"
+        ></iframe>
+        
         <!-- 下载按钮 -->
-        <div style="text-align: center;">
-            <a href="your-portfolio.pdf" class="download-btn" download>
-                ▼ 下载完整作品集 (PDF 15MB)
-            </a>
-        </div>
-
-        <!-- 联系方式 -->
-        <div class="contact-bar">
-            <a href="mailto:your@email.com">📧 联系邮箱</a>
-            <a href="https://behance.net/yourprofile" target="_blank">🎨 Behance</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
-        </div>
+        <a href="resume.pdf" class="download-btn" download>
+            ⬇ 下载完整版 (PDF)
+        </a>
     </div>
 </body>
 </html>
